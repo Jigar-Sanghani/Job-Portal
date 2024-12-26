@@ -5,7 +5,7 @@ const { userRouter } = require('./router/user_router');
 const app = express();
 
 app.get("/", (req, res) => {
-    res.status(200).json({ msg: "hello node js" });
+    res.status(200).json({ msg: "Hello Node Js ||" });
 });
 
 
