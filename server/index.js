@@ -2,6 +2,7 @@
 const express = require('express');
 const dbconnect = require('./config/db');
 const { userRouter } = require('./router/user_router');
+const companyRoute = require('./router/company_route');
 const app = express();
 
 
@@ -14,7 +15,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/user", userRouter)
-
+app.use("/compny",companyRoute)
 const PORT = process.env.PORT || 8090;
 app.listen(PORT, () => {
     console.log(`Server Is Running On Port ${PORT} !!`);
